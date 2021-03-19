@@ -1,8 +1,8 @@
-# version: 0.0
-# os: linux
-# files:
-#   - source: /
-#     destination: /
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /
 # permissions:
 #   - object: /home/ubuntu
 #     owner: ubuntu
@@ -10,8 +10,8 @@
 #     type:
 #       - directory
 #       - file
-# hooks:
-#   ApplicationStart:
-#     - location: scripts/reload-pm2.sh
-#       timeout: 300
-#       runas: ubuntu
+hooks:
+  ApplicationStart:
+    - location: scripts/reload-pm2.sh
+      timeout: 300
+      runas: ubuntu
