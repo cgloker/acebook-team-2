@@ -22,11 +22,10 @@ jobs:
         SOURCE_DIR:     # optional: defaults to entire repository
 
       # Create deployment to CodeDeploy
-    - name: AWS Create Deployment
+    - name: AWS Create Deployment to CodeDeploy
       run: |
         aws deploy create-deployment \
           --application-name acebook-team-2 \
           --deployment-config-name CodeDeployDefault.OneAtATime \
           --deployment-group-name acebook-group-2-deployment \
-          --file-exists-behavior OVERWRITE \
-          --s3-location bucket=acebook-team-2,bundleType=zip,eTag=ad0536d119627a3229ad106a7cf3b088key=Dockerfile.zip
+          --s3-location bucket=acebook-team-2,bundleType=zip,eTag=ad0536d119627a3229ad106a7cf3b088,key=Dockerfile.zip
