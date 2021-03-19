@@ -28,4 +28,4 @@ jobs:
           --application-name acebook-team-2 \
           --deployment-config-name CodeDeployDefault.OneAtATime \
           --deployment-group-name acebook-group-2-deployment \
-          --s3-location bucket=acebook-team-2,bundleType=zip,key=Dockerfile.zip \
+          --s3-location bucket=acebook-team-2,eTag=ad0536d119627a3229ad106a7cf3b088,bundleType=zip,key=Dockerfile.zip \
