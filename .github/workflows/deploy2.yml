@@ -33,7 +33,7 @@ jobs:
     - name: AWS Create Deployment to CodeDeploy
       run: |
         aws deploy create-deployment \
-          --application-name acebook-team-2 \
+          --application-name group2-acebook \
           --deployment-config-name CodeDeployDefault.OneAtATime \
           --deployment-group-name acebook-group-2-deployment \
           --file-exists-behavior OVERWRITE \
