@@ -37,4 +37,4 @@ jobs:
           --deployment-config-name CodeDeployDefault.OneAtATime \
           --deployment-group-name acebook-group-2-deployment \
           --file-exists-behavior OVERWRITE \
-          --s3-location bucket=acebook-team-2,key=Dockerfile.zip,bundleType=zip \
+          --s3-location bucket=acebook-team-2,key=Dockerfile,bundleType=zip \
