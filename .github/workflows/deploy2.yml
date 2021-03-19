@@ -21,6 +21,14 @@ jobs:
         AWS_REGION: 'eu-west-2'   # optional: defaults to us-east-1
         SOURCE_DIR:     # optional: defaults to entire repository
 
+      # Configure AWS credentials
+    - name: Configure AWS credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: eu-west-2
+
       # Create deployment to CodeDeploy
     - name: AWS Create Deployment to CodeDeploy
       run: |
@@ -30,4 +38,3 @@ jobs:
           --deployment-group-name acebook-group-2-deployment \
           --file-exists-behavior OVERWRITE \
           --s3-location bucket=acebook-team-2,eTag=ad0536d119627a3229ad106a7cf3b088,bundleType=zip,key=Dockerfile.zip \
-          --region us-west-2 \
