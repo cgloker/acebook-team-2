@@ -12,6 +12,10 @@ files:
 #       - file
 hooks:
   ApplicationStart:
-    - location: scripts/reload-pm2.sh
+    - location: scripts/start-app.sh
       timeout: 300
-      runas: ubuntu
+      # runas: ubuntu
+
+  # ApplicationStop:
+  #   - location: scripts/stop-app.sh
+  #     timeout: 300
