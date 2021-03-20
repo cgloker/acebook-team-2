@@ -19,3 +19,8 @@ hooks:
   # ApplicationStop:
   #   - location: scripts/stop-app.sh
   #     timeout: 300
+  
+  # ApplicationStart:
+  #   - location: scripts/reload-pm2.sh
+  #     timeout: 300
+  #     # runas: ubuntu
